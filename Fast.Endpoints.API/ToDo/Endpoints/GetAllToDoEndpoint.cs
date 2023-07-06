@@ -15,8 +15,6 @@ public class GetAllToDoEndpoint : EndpointWithoutRequest<List<ToDo>>
     {
         Get("/todos");
         AllowAnonymous();
-        Description(x => x
-        .Produces<List<ToDo>>());
     }
 
     public override async Task HandleAsync(CancellationToken ct)

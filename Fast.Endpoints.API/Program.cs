@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddFastEndpoints();
 builder.Services.SwaggerDocument();
 
-builder.Services.AddScoped<IToDoService, ToDoService>();
+builder.Services.AddSingleton<IToDoService, ToDoService>();
 
 var app = builder.Build();
 
